@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Whole Body Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Role</h1>
+
+    <button onclick="login('coach')">Coach</button>
+    <button onclick="login('trainer')">Trainer</button>
+    <button onclick="login('doctor')">Team Doctor</button>
+    <button onclick="login('athlete')">Athlete</button>
+  </div>
+
+  <script>
+    function login(role) {
+      localStorage.setItem("role", role);
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
