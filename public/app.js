@@ -7,7 +7,8 @@ if (!role) {
 document.getElementById("roleTitle").innerText =
   role.toUpperCase() + " DASHBOARD";
 
-fetch(`http://localhost:3000/api/dashboard/${role}`)
+// Change localhost to the forwarded URL in GitHub Codespaces
+fetch(`http://<your-codespace-url>.githubpreview.dev/api/dashboard/${role}`)
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("data");
