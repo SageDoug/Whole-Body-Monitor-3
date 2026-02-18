@@ -8,7 +8,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use("/api", roleRoutes);
-
-const PORT = 3000;
+// GitHub Codespaces and cloud environments often use PORT from environment variables
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
